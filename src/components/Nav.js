@@ -62,7 +62,7 @@ export default function Nav() {
         </List>
       </Box>
       <Box sx={{ display: 'flex' }}>
-        <SearchIcon sx={{color: 'text.white'}}/>
+        <SearchIcon sx={{ color: 'text.white' }} />
         <Typography sx={{ ml: 2, color: 'text.white' }}>Search</Typography>
       </Box>
     </Box>
