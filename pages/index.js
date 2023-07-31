@@ -1,7 +1,7 @@
 import { Container, Typography, Box } from '@mui/material';
 import Nav from '../src/components/Nav';
 import Panel from '../src/components/Panel';
-import Dashboard from '../src/components/Dashboard';
+import Dashboard from '../src/components/dashboard/Dashboard';
 
 export default function Home() {
   return (
@@ -16,9 +16,6 @@ export default function Home() {
       <Nav />
       <Panel />
       <Dashboard />
-      <Typography variant="h1" sx={{ color: 'white' }}>
-        Hello World!
-      </Typography>
     </Box>
   );
 }
