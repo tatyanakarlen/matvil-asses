@@ -6,6 +6,15 @@ export const theme = createTheme({
      main: '#35373D',
      dark: "#000",
    },
+   secondary: {
+       main: '#F9F9FC', 
+    //    greyText: 
+
+   }, 
+   text: {
+       main: '#a1a1a3', 
+       white: '#FFFFFF', 
+   }
  },
 });
 

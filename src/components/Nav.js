@@ -3,6 +3,26 @@ import { Typography, Box, List, ListItem } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function Nav() {
+  const listItemBaseStyles = {
+    color: 'text.main',
+  };
+
+  const activeListItemStyles = {
+    color: 'text.white',
+    borderBottom: '3px solid red',
+    padding: 0,
+    margin: '3px 16px 0px 16px',
+  };
+
+  const menuItems = [
+    'About',
+    'Dashboard',
+    'Serials',
+    'Movies',
+    'Shows',
+    'Kids',
+  ];
+
   return (
     <Box
       sx={{
@@ -10,7 +30,7 @@ export default function Nav() {
         height: '5rem',
         bgcolor: 'primary.main',
         py: 5,
-        px: 7,
+        px: 8,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -28,18 +48,23 @@ export default function Nav() {
             ml: 9,
           }}
         >
-          <ListItem>About</ListItem>
-          <ListItem>Dashboard</ListItem>
-          <ListItem>Serials</ListItem>
-          <ListItem>Movies</ListItem>
-          <ListItem>Shows</ListItem>
-          <ListItem>Kids</ListItem>
-          <ListItem></ListItem>
+          {menuItems.map((listItem, index) => (
+            <ListItem
+              sx={
+                listItem === 'Dashboard'
+                  ? activeListItemStyles
+                  : listItemBaseStyles
+              }
+              key={index}
+            >
+              {listItem}
+            </ListItem>
+          ))}
         </List>
       </Box>
       <Box sx={{ display: 'flex' }}>
-        <SearchIcon />
-        <Typography sx={{ ml: 2 }}>Search</Typography>
+        <SearchIcon sx={{color: 'text.white'}}/>
+        <Typography sx={{ ml: 2, color: 'text.white' }}>Search</Typography>
       </Box>
     </Box>
   );
