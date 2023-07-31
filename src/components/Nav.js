@@ -1,4 +1,3 @@
-import { theme } from '../../utils/theme';
 import { Typography, Box, List, ListItem } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -9,7 +8,7 @@ export default function Nav() {
 
   const activeListItemStyles = {
     color: 'text.white',
-    borderBottom: '3px solid red',
+    borderBottom: '3px solid #F71735',
     padding: 0,
     margin: '3px 16px 0px 16px',
   };
@@ -37,7 +36,7 @@ export default function Nav() {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Typography sx={{ color: 'red' }} variant="h3">
+        <Typography sx={{ color: 'secondary.main' }} variant="h3">
           etvnet
         </Typography>
         <List
