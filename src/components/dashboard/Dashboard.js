@@ -37,7 +37,6 @@ export default function Dashboard() {
     <>
       <Box
         sx={{
-          width: '90%',
           color: 'text.white',
           py: 0,
           px: 6,
@@ -48,11 +47,10 @@ export default function Dashboard() {
           sx={{
             display: 'flex',
             mt: '-2rem',
-            ml: '-2rem',
           }}
         >
           {listItems.map((listItem, index) => (
-            <ListItem sx={{ justifyContent: 'center' }} key={index}>
+            <ListItem sx={{ justifyContent: 'start' }} key={index}>
               <Box
                 sx={
                   listItem === 'Settings and Profile'
