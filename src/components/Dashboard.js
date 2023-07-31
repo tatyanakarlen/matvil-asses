@@ -10,8 +10,8 @@ export default function Dashboard() {
     color: 'text.white',
     borderBottom: '3px solid #F71735',
     padding: 0,
-    margin: '3px 16px 0px 16px',
-    width: 'fit-content'
+    marginTop: '4px',
+    paddingBottom: '3px',
   };
 
   const listItems = [
@@ -39,17 +39,15 @@ export default function Dashboard() {
           }}
         >
           {listItems.map((listItem, index) => (
-              
-            <ListItem
-              
-              key={index}
-            >
-                <Box sx={
-                listItem === 'Settings and Profile'
-                  ? activeListItemStyles
-                  : listItemBaseStyles
-              }>
-              {listItem}
+            <ListItem key={index}>
+              <Box
+                sx={
+                  listItem === 'Settings and Profile'
+                    ? activeListItemStyles
+                    : listItemBaseStyles
+                }
+              >
+                {listItem}
               </Box>
             </ListItem>
           ))}
