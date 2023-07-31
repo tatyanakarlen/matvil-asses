@@ -1,8 +1,7 @@
-import { Typography, Box, List, ListItem, Button } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 
 export default function ProfileCard({ name, color, user }) {
-
   return (
     <Box
       sx={{
@@ -17,7 +16,15 @@ export default function ProfileCard({ name, color, user }) {
         p: 3,
       }}
     >
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 1.5,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Box
           sx={{
             width: '3rem',
@@ -34,13 +41,22 @@ export default function ProfileCard({ name, color, user }) {
         <Typography sx={{ color: 'text.main' }}>{name}</Typography>
       </Box>
       <Box>
-          { user.primary === true ? 
-        <Button variant="text" sx={{ color: 'secondary.dark', mt: 9 }}>
-          Main Profile
-        </Button>
-        : 
-        <Button variant="outlined" sx={{ color: 'secondary.main', mt: 9, outline: '0.1px solid #F71735' }}>Delete Profile</Button>
-}
+        {user.primary === true ? (
+          <Button variant="text" sx={{ color: 'secondary.dark', mt: 9 }}>
+            Main Profile
+          </Button>
+        ) : (
+          <Button
+            variant="outlined"
+            sx={{
+              color: 'secondary.main',
+              mt: 9,
+              outline: '0.1px solid #F71735',
+            }}
+          >
+            Delete Profile
+          </Button>
+        )}
       </Box>
     </Box>
   );
