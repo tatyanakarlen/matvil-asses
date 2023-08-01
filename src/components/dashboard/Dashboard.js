@@ -15,6 +15,7 @@ export default function Dashboard() {
           py: 0,
           px: 8,
           mt: 3,
+          overflow: 'hidden'
         }}
       >
         <Box sx={{ bgcolor: 'primary.main', borderRadius: '10px', p: 4 }}>

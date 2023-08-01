@@ -16,6 +16,7 @@ export default function SettingsSwitch({}) {
   };
 
   return (
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '9rem'}}>
     <FormControlLabel
       control={
         <Switch
@@ -26,5 +27,7 @@ export default function SettingsSwitch({}) {
       }
       label={checked ? 'Yes' : 'No'}
     />
+    </Box>
+   
   );
 }
