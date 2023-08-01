@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import Nav from '../src/components/Nav';
 import WelcomePanel from '../src/components/dashboard/Panels/WelcomePanel';
 import Dashboard from '../src/components/dashboard/Dashboard';
+import Footer from '../src/components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <WelcomePanel />
       <Dashboard />
+      <Footer />
     </Box>
   );
 }
