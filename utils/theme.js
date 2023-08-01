@@ -5,22 +5,16 @@ export const theme = createTheme({
     MuiSwitch: {
       styleOverrides: {
         switchBase: {
-          // Controls default (unchecked) color for the thumb
           color: '#0075FF',
         },
         colorPrimary: {
           '&.Mui-checked': {
-            // Controls checked color for the thumb
             color: '#0075FF',
           },
         },
         track: {
-          // Controls default (unchecked) color for the track
-          
           backgroundColor: 'white',
           '.Mui-checked.Mui-checked + &': {
-            // Controls checked color for the track
-            
             backgroundColor: '#0075FF',
           },
         },

@@ -1,11 +1,7 @@
-import {
-  Typography,
-  Box,
-  Select,
-  MenuItem,
-} from '@mui/material';
+import { Typography, Box, Select, MenuItem } from '@mui/material';
 import SettingsSwitch from './SettingsSwitch';
 import SettingsBox from './SettingsBox';
+import SettingsSelect from './SettingsSelect';
 
 export default function Settings() {
   const resolutions = [
@@ -13,6 +9,13 @@ export default function Settings() {
     { value: 'BLU-RAY', label: 'BLU-RAY' },
     { value: 'VHS', label: 'VHS' },
   ];
+
+  const qualities = [
+    { value: 'HIGH', label: 'HIGH' },
+    { value: 'MEDIUM', label: 'MEDIUM' },
+    { value: 'LOW', label: 'LOW' },
+  ];
+
   return (
     <>
       <Typography sx={{ mt: 10 }} variant="h5">
@@ -34,25 +37,13 @@ export default function Settings() {
           settingsProp={<SettingsSwitch />}
         />
         <SettingsBox
-          text={'Open video in new window'}
-          settingsProp={<SettingsSwitch />}
+          text={'Quality of picture for archives'}
+          settingsProp={<SettingsSelect data={resolutions} />}
         />
         <SettingsBox
-          text={'Open video in new window'}
-          settingsProp={<SettingsSwitch />}
+          text={'Quality of picture for live viewing'}
+          settingsProp={<SettingsSelect data={qualities} />}
         />
-
-        <Select defaultValue="HD" sx={{ color: 'red' }}>
-          {resolutions.map((resolution) => (
-            <MenuItem
-              key={resolution.value}
-              value={resolution.value}
-              disabled={resolution.disabled}
-            >
-              {resolution.label}
-            </MenuItem>
-          ))}
-        </Select>
       </Box>
     </>
   );
