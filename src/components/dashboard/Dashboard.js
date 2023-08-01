@@ -1,8 +1,28 @@
-import { Typography, Box, List, ListItem, Button } from '@mui/material';
+import * as React from 'react';
+import {
+  Typography,
+  Box,
+  List,
+  ListItem,
+  Button,
+  Switch,
+  FormControlLabel,
+  InputLabel,
+  Select,
+  MenuItem,
+  FormControl
+} from '@mui/material';
 import ProfileCard from './ProfileCard';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 export default function Dashboard() {
+  const [checked, setChecked] = React.useState(true);
+  const value = 'HD'
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
   const listItemBaseStyles = {
     color: 'text.main',
   };
@@ -117,6 +137,55 @@ export default function Dashboard() {
               >
                 Add Profile
               </Button>
+            </Box>
+          </Box>
+          <Typography sx={{ mt: 10 }} variant="h5">
+            Settings
+          </Typography>
+
+          <Box
+            sx={{
+              borderTop: '1px solid rgb(66 65 65)',
+              mt: 3,
+              pt: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                gap: 5,
+                alignItems: 'center',
+                width: '30rem',
+              }}
+            >
+              <Typography sx={{ color: 'text.main', width: '18rem' }}>
+                Open video in new window
+              </Typography>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{ 'aria-label': 'controlled' }}
+                  />
+                }
+                label={checked ? 'Yes' : 'No'}
+              />
+            </Box>
+            <Box sx={{ display: 'flex', gap: 5, alignItems: 'center' }}>
+              <Typography sx={{ color: 'text.main', width: '18rem' }}>
+                Picture quality for archive
+              </Typography>
+             
+            </Box>
+            <Box sx={{ display: 'flex', gap: 5, alignItems: 'center' }}>
+              <Typography sx={{ color: 'text.main', width: '18rem' }}>
+                Picture quality for live viewing
+              </Typography>
+            
             </Box>
           </Box>
         </Box>
