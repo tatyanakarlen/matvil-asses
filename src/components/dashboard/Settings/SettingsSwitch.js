@@ -1,12 +1,5 @@
 import { useState } from 'react';
-import {
-  Typography,
-  Box,
-  Switch,
-  FormControlLabel,
-  Select,
-  MenuItem,
-} from '@mui/material';
+import { Box, Switch, FormControlLabel } from '@mui/material';
 
 export default function SettingsSwitch({}) {
   const [checked, setChecked] = useState(true);
@@ -16,18 +9,24 @@ export default function SettingsSwitch({}) {
   };
 
   return (
-    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '9rem'}}>
-    <FormControlLabel
-      control={
-        <Switch
-          checked={checked}
-          onChange={handleChange}
-          inputProps={{ 'aria-label': 'controlled' }}
-        />
-      }
-      label={checked ? 'Yes' : 'No'}
-    />
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '9rem',
+      }}
+    >
+      <FormControlLabel
+        control={
+          <Switch
+            checked={checked}
+            onChange={handleChange}
+            inputProps={{ 'aria-label': 'controlled' }}
+          />
+        }
+        label={checked ? 'Yes' : 'No'}
+      />
     </Box>
-   
   );
 }
