@@ -1,7 +1,7 @@
 import { Typography, Box, List, ListItem } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function Nav() {
+export default function DesktopNav() {
   const listItemBaseStyles = {
     color: 'text.main',
   };
