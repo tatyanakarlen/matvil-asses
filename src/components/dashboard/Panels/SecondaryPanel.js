@@ -27,7 +27,13 @@ export default function SecondaryPanel() {
           color: 'text.white',
           py: 0,
           px: 6,
-          mt: '-1.5rem',
+          mt: {
+            xs: '2.5rem',
+            sm: '2.5rem',
+            md: '-1.5rem',
+            lg: '-1.5rem',
+            xl: '-1.5rem',
+          },
         }}
       >
         <List

@@ -26,10 +26,13 @@ export const theme = createTheme({
     primary: {
       main: '#323233',
       dark: '#1c1c1c',
+      mainMobile: '#292828', 
+      darkMobile: '#272727',
     },
     secondary: {
       main: '#F71735',
       dark: '#0075FF',
+      
     },
     text: {
       main: '#a1a1a3',

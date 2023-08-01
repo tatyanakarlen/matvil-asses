@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function MobileNav() {
-    
+
   const iconContainerStyles = {
     width: '3rem',
     height: '3rem',
@@ -16,7 +16,7 @@ export default function MobileNav() {
   return (
     <Box
       sx={{
-        bgColor: 'primary.dark',
+        bgColor: '#000',
         color: 'text.white',
         display: 'flex',
         justifyContent: 'space-between',
