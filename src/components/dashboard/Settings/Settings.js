@@ -8,7 +8,7 @@ import SettingsSwitch from './SettingsSwitch';
 import SettingsBox from './SettingsBox';
 
 export default function Settings() {
-  const options = [
+  const resolutions = [
     { value: 'HD', label: 'HD' },
     { value: 'BLU-RAY', label: 'BLU-RAY' },
     { value: 'VHS', label: 'VHS' },
@@ -43,13 +43,13 @@ export default function Settings() {
         />
 
         <Select defaultValue="HD" sx={{ color: 'red' }}>
-          {options.map((option) => (
+          {resolutions.map((resolution) => (
             <MenuItem
-              key={option.value}
-              value={option.value}
-              disabled={option.disabled}
+              key={resolution.value}
+              value={resolution.value}
+              disabled={resolution.disabled}
             >
-              {option.label}
+              {resolution.label}
             </MenuItem>
           ))}
         </Select>
