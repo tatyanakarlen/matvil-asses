@@ -1,30 +1,49 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
- palette: {
-   primary: {
-     main: '#323233',
-     dark: "#1c1c1c",
-   },
-   secondary: {
-       main: '#F71735', 
-       dark: '#0075FF'
-    //    greyText: 
+  components: {
+    MuiSwitch: {
+      styleOverrides: {
+        switchBase: {
+          // Controls default (unchecked) color for the thumb
+          color: '#0075FF',
+        },
+        colorPrimary: {
+          '&.Mui-checked': {
+            // Controls checked color for the thumb
+            color: '#0075FF',
+          },
+        },
+        track: {
+          // Controls default (unchecked) color for the track
+          
+          backgroundColor: 'white',
+          '.Mui-checked.Mui-checked + &': {
+            // Controls checked color for the track
+            
+            backgroundColor: '#0075FF',
+          },
+        },
+      },
+    },
+  },
 
-   }, 
-   text: {
-       main: '#a1a1a3', 
-       white: '#FFFFFF', 
-   }
- },
+  palette: {
+    primary: {
+      main: '#323233',
+      dark: '#1c1c1c',
+    },
+    secondary: {
+      main: '#F71735',
+      dark: '#0075FF',
+      //    greyText:
+    },
+    text: {
+      main: '#a1a1a3',
+      white: '#FFFFFF',
+    },
+  },
 });
-
-
-
-
-
-
-
 
 // palette: {
 //     primary: {
