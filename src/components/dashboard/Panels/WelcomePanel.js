@@ -2,7 +2,7 @@ import { Typography, Box, Button } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
-export default function Panel() {
+export default function WelcomePanel() {
   return (
     <>
       <Box
