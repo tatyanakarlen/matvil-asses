@@ -5,13 +5,24 @@ export default function SettingsBox({ text, settingsProp }) {
     <Box
       sx={{
         display: 'flex',
-        gap: 5,
+        gap: {
+          xs: 1,
+          sm: 1,
+          md: 1,
+          lg: 10,
+        },
+
         alignItems: 'center',
-        width: '30rem',
-        height: '3rem',
+        height: {
+          xs: '4rem',
+          sm: '3rem',
+          md: '3rem',
+          lg: '3rem',
+        },
+        overflow: 'hidden',
       }}
     >
-      <Typography sx={{ color: 'text.main', width: '18rem' }}>
+      <Typography variant="body1" sx={{ color: 'text.main', width: '18rem' }}>
         {text}
       </Typography>
       {settingsProp}

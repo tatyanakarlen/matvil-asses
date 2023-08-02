@@ -1,8 +1,12 @@
 import ProfileCard from '../ProfileCard';
-import { Typography, Box, Button } from '@mui/material';
+import { Typography, Box, Button, Divider } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { useMediaQuery } from '@mui/material';
 
 export default function UserPanel() {
+  const isSmallScreen = useMediaQuery((theme) =>
+    theme.breakpoints.between('xs', 'sm')
+  );
   const users = [
     {
       name: 'Vasya P',
@@ -16,6 +20,15 @@ export default function UserPanel() {
   return (
     <>
       <Typography variant="h5">Profile</Typography>
+      {isSmallScreen && (
+        <Divider
+          sx={{
+            color: 'rgb(66 65 65)',
+            py: 1,
+            borderColor: 'rgb(66 65 65)',
+          }}
+        />
+      )}
       <Box sx={{ display: 'flex', mt: 3, gap: 4, flexWrap: 'wrap' }}>
         {users.map((user, index) => (
           <ProfileCard
@@ -29,8 +42,13 @@ export default function UserPanel() {
           sx={{
             position: 'relative',
             bgcolor: 'primary.dark',
-            width: '13rem',
-            height: '15rem',
+            width: { xs: '100%', sm: '13rem', md: '13rem', lg: '13rem' },
+            height: {
+              xs: '12rem',
+              sm: '15rem',
+              md: '15rem',
+              lg: '15rem',
+            },
             borderRadius: '10px',
             p: 3,
           }}

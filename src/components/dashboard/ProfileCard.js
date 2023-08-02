@@ -10,8 +10,13 @@ export default function ProfileCard({ name, color, user }) {
         alignItems: 'center',
         justifyContent: 'space-between',
         bgcolor: 'primary.dark',
-        width: '13rem',
-        height: '15rem',
+        width: { xs: '100%', sm: '13rem', md: '13rem', lg: '13rem' },
+        height: {
+          xs: '12rem',
+          sm: '15rem',
+          md: '15rem',
+          lg: '15rem',
+        },
         borderRadius: '10px',
         p: 3,
       }}
@@ -42,7 +47,19 @@ export default function ProfileCard({ name, color, user }) {
       </Box>
       <Box>
         {user.primary === true ? (
-          <Button variant="text" sx={{ color: 'secondary.dark', mt: 9 }}>
+          <Button
+            variant="text"
+            sx={{
+              color: 'secondary.dark',
+              mt: {
+                sx: 2,
+                sm: 2,
+                md: 2,
+                lg: 2,
+                xl: 2,
+              },
+            }}
+          >
             Main Profile
           </Button>
         ) : (
@@ -50,7 +67,13 @@ export default function ProfileCard({ name, color, user }) {
             variant="outlined"
             sx={{
               color: 'secondary.main',
-              mt: 9,
+              mt: {
+                sx: 0,
+                sm: 0,
+                md: 0,
+                lg: 9,
+                xl: 9,
+              },
               outline: '0.1px solid #F71735',
             }}
           >

@@ -29,7 +29,6 @@ export default function Settings() {
           pt: 4,
           display: 'flex',
           flexDirection: 'column',
-          gap: 2,
         }}
       >
         <SettingsBox
