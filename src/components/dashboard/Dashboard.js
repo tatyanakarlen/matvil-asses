@@ -10,9 +10,28 @@ export default function Dashboard() {
       <Box
         sx={{
           color: 'text.white',
-          py: 0,
-          px: 8,
-          mt: 3,
+          // py: 0,
+          // px: 8,
+          px: {
+            xs: 2,
+            sm: 3,
+            md: 8,
+            lg: 8,
+            // px right left
+          },
+          py: {
+            xs: 0,
+            sm: 0,
+            md: 0,
+            lg: 0,
+            // py top bottom
+          },
+          mt: {
+            xs: 1,
+            sm: 1,
+            md: 2,
+            lg: 3,
+          }, 
           overflow: 'hidden',
         }}
       >

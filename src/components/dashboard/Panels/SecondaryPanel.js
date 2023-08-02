@@ -25,8 +25,23 @@ export default function SecondaryPanel() {
       <Box
         sx={{
           color: 'text.white',
-          py: 0,
-          px: 6,
+          // py: 0,
+          // px: 6,
+          px: {
+            xs: 0,
+            sm: 1,
+            md: 6,
+            lg: 6,
+            // px right left
+          },
+          py: {
+            xs: 1,
+            sm: 1,
+            md: 1,
+            lg: 0,
+            // py top bottom
+          },
+
           mt: {
             xs: '2.5rem',
             sm: '2.5rem',
@@ -40,10 +55,17 @@ export default function SecondaryPanel() {
           sx={{
             display: 'flex',
             mt: '-2rem',
+            overflow: 'scroll',
+            '&::-webkit-scrollbar': {
+              display: 'none',
+            },
           }}
         >
           {listItems.map((listItem, index) => (
-            <ListItem sx={{ justifyContent: 'start' }} key={index}>
+            <ListItem
+              sx={{ justifyContent: 'start', whiteSpace: 'nowrap' }}
+              key={index}
+            >
               <Box
                 sx={
                   listItem === 'Settings and Profile'

@@ -59,8 +59,12 @@ export default function WelcomePanel() {
             sx={{
               color: 'text.white',
               mt: {
-                xs: 1,
-                sm: 1,
+                xs: 2,
+                sm: 2,
+              },
+              mb: {
+                xs: -1,
+                sm: -1,
               },
             }}
           >
@@ -93,7 +97,12 @@ export default function WelcomePanel() {
               <Box>
                 <Typography
                   variant="h7"
-                  sx={{ mr: 40, display: 'flex', alignItems: 'center', gap: 1 }}
+                  sx={{
+                    mr: { lg: 40, md: 20 },
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1,
+                  }}
                 >
                   <AddCircleOutlineIcon
                     sx={{
