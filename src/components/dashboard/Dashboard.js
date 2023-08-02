@@ -36,9 +36,9 @@ export default function Dashboard() {
             bgcolor: {
               xs: 'primary.mainMobile',
               sm: 'primary.mainMobile',
-              md: 'primary.dark',
-              lg: 'primary.dark',
-              xl: 'primary.dark',
+              md: 'primary.main',
+              lg: 'primary.main',
+              xl: 'primary.main',
             },
             borderRadius: '10px',
             p: 4,
