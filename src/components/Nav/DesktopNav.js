@@ -44,7 +44,8 @@ export default function DesktopNav() {
             display: 'flex',
             justifyContent: 'space-between',
             gap: 3,
-            ml: 9,
+            ml: { md: 5, lg: 6, xl: 8 },
+            // ml: 9,
           }}
         >
           {menuItems.map((listItem, index) => (

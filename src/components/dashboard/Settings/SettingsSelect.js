@@ -10,7 +10,12 @@ export default function SettingsSelect({ data }) {
         sx={{
           color: 'black',
           backgroundColor: 'text.white',
-          width: '9rem',
+          width: {
+            xs: '6rem',
+            sm: '9rem',
+            md: '9rem',
+            lg: '9rem',
+          },
           height: '2.2rem',
         }}
       >

@@ -12,7 +12,7 @@ export default function Footer() {
           mt: 6,
           width: '100%',
           bgcolor: 'primary.main',
-          px: 12,
+          px: { xs: 3, sm: 12, md: 12, lg: 12 },
           py: 6,
           color: 'text.white',
         }}
@@ -21,9 +21,23 @@ export default function Footer() {
           sx={{
             pb: 8,
             display: 'flex',
+            flexDirection: {
+              xs: 'column',
+              sm: 'row',
+              md: 'row',
+              lg: 'row',
+            },
+            alignItems: {
+              xs: 'center',
+            },
             flexWrap: 'wrap',
             justifyContent: 'space-between',
-            gap: 2,
+            gap: {
+              xs: 5,
+              sm: 3,
+              md: 3,
+              lg: 3,
+            },
             borderBottom: '1px solid rgb(66 65 65)',
           }}
         >

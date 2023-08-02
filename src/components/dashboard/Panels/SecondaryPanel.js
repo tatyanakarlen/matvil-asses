@@ -25,21 +25,17 @@ export default function SecondaryPanel() {
       <Box
         sx={{
           color: 'text.white',
-          // py: 0,
-          // px: 6,
           px: {
             xs: 0,
             sm: 1,
             md: 6,
             lg: 6,
-            // px right left
           },
           py: {
             xs: 1,
             sm: 1,
             md: 1,
             lg: 0,
-            // py top bottom
           },
 
           mt: {
