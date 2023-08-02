@@ -31,7 +31,19 @@ export default function Dashboard() {
           overflow: 'hidden',
         }}
       >
-        <Box sx={{ bgcolor: 'primary.main', borderRadius: '10px', p: 4 }}>
+        <Box
+          sx={{
+            bgcolor: {
+              xs: 'primary.mainMobile',
+              sm: 'primary.mainMobile',
+              md: 'primary.dark',
+              lg: 'primary.dark',
+              xl: 'primary.dark',
+            },
+            borderRadius: '10px',
+            p: 4,
+          }}
+        >
           <UserPanel />
           <Settings />
         </Box>

@@ -11,7 +11,13 @@ export default function Footer() {
         sx={{
           mt: 6,
           width: '100%',
-          bgcolor: 'primary.main',
+          bgcolor: {
+            xs: 'primary.mainMobile',
+            sm: 'primary.mainMobile',
+            md: 'primary.dark',
+            lg: 'primary.dark',
+            xl: 'primary.dark',
+          },
           px: { xs: 3, sm: 12, md: 12, lg: 12 },
           py: 6,
           color: 'text.white',
