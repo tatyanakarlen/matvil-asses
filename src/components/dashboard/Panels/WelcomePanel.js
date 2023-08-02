@@ -98,10 +98,6 @@ export default function WelcomePanel() {
                   <AddCircleOutlineIcon
                     sx={{
                       fontSize: '2rem',
-                      mb: {
-                        xs: 2,
-                        sm: 2,
-                      },
                     }}
                   />
                   Edit Profile
